@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F707FBAB-6C38-4EAD-9CAB-C12E9226046B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Matricula</RootNamespace>
+    <AssemblyName>Matricula</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\10.66.121.42\sistemas\Vestibulinho\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\10.66.121.42\sistemas\Vestibulinho\</InstallUrl>
+    <ProductName>Vestibulinho</ProductName>
+    <PublisherName>Leandro Radighieri</PublisherName>
+    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>02DFB62E25C05635BC74D1B26BACD98611EF0402</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Matricula_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.interop.access.dao, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes Banco\ConectaChamada.cs" />
+    <Compile Include="Classes Banco\ConectaGeral.cs" />
+    <Compile Include="Classes Banco\ConectaVagas.cs" />
+    <Compile Include="Formulários\frm_AvisoSobra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_AvisoSobra.Designer.cs">
+      <DependentUpon>frm_AvisoSobra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Dados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Dados.Designer.cs">
+      <DependentUpon>frm_Dados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_DadosVest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_DadosVest.Designer.cs">
+      <DependentUpon>frm_DadosVest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Email.Designer.cs">
+      <DependentUpon>frm_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Estatisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Estatisticas.Designer.cs">
+      <DependentUpon>frm_Estatisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Lista.Designer.cs">
+      <DependentUpon>frm_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Listao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Listao.Designer.cs">
+      <DependentUpon>frm_Listao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_ListaSegOp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_ListaSegOp.Designer.cs">
+      <DependentUpon>frm_ListaSegOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Matriculados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Matriculados.Designer.cs">
+      <DependentUpon>frm_Matriculados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Mensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Mensagem.Designer.cs">
+      <DependentUpon>frm_Mensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_NaoMatriculado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_NaoMatriculado.Designer.cs">
+      <DependentUpon>frm_NaoMatriculado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Pesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Pesquisa.Designer.cs">
+      <DependentUpon>frm_Pesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Principal.Designer.cs">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Versao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Versao.Designer.cs">
+      <DependentUpon>frm_Versao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Vestibulinhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Vestibulinhos.Designer.cs">
+      <DependentUpon>frm_Vestibulinhos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes Atributos\Geral.cs" />
+    <Compile Include="Classes Banco\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes Atributos\Vagas.cs" />
+    <Compile Include="vestibulinhoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vestibulinhoDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formulários\frm_AvisoSobra.resx">
+      <DependentUpon>frm_AvisoSobra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Dados.resx">
+      <DependentUpon>frm_Dados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_DadosVest.resx">
+      <DependentUpon>frm_DadosVest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Email.resx">
+      <DependentUpon>frm_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Estatisticas.resx">
+      <DependentUpon>frm_Estatisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Lista.resx">
+      <DependentUpon>frm_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Listao.resx">
+      <DependentUpon>frm_Listao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_ListaSegOp.resx">
+      <DependentUpon>frm_ListaSegOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Matriculados.resx">
+      <DependentUpon>frm_Matriculados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Mensagem.resx">
+      <DependentUpon>frm_Mensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_NaoMatriculado.resx">
+      <DependentUpon>frm_NaoMatriculado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Pesquisa.resx">
+      <DependentUpon>frm_Pesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Principal.resx">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Versao.resx">
+      <DependentUpon>frm_Versao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Vestibulinhos.resx">
+      <DependentUpon>frm_Vestibulinhos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Matricula_1_TemporaryKey.pfx" />
+    <None Include="Matricula_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="vestibulinhoDataSet.xsc">
+      <DependentUpon>vestibulinhoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vestibulinhoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vestibulinhoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vestibulinhoDataSet.xss">
+      <DependentUpon>vestibulinhoDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\Vestibulinho.jpg" />
+    <None Include="Resources\Etec Amim Jundi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
